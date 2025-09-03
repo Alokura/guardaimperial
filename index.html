@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interativo Da Guarda</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="container">
+    <div id="mapa-wrap">
+      <!-- mapa base -->
+      <img id="mapa-base" src="Image/guarda_imperial.jpg" alt="Mapa completo de imperius">
+
+      <!-- Overlay SVG clicável -->
+      <svg id="mapa-overlay" viewBox="0 0 3840 3840" preserveAspectRatio="xMidYMid meet">
+  <image href="Image/guarda_imperial.jpg" width="3840" height="3840">
+
+  <!-- Região Vermelha -->
+  <polygon class="regiao" id="vermelho" points="486,806 502,841 517,837 518,794 514,788 516,758 518,694 531,677 541,658 552,654 558,658 560,713 566,730 566,752 556,768 551,785 553,810 545,831 544,878 548,877 551,903 552,923 548,939 530,951 493,947 482,939 485,901 473,918 466,946 452,972 421,961 394,938 392,897 405,844 419,818 429,817 438,811 444,805 453,794 461,779 469,778 477,788 488,807 498,829 503,843 515,839 486,806"></polygon>
+  
+</image></svg>
+
+        <polygon class="regiao" id="azul" points="330,520 410,520 420,640 360,700 300,660 290,580"></polygon>
+
+        <polygon class="regiao" id="verde" points="700,560 790,560 820,760 740,860 690,800 690,640"></polygon>
+
+        <!-- adiciona amarelo, marrom, ciano, rosa -->
+      
+    </div>
+
+    <!-- Zoom -->
+    <div class="hidden" id="zoom-area">
+      <img id="zoom-img" alt="Zoom da região">
+      <button onclick="fecharZoom()">Voltar</button>
+    </div>
+  </div>
+</body>
+</html>
